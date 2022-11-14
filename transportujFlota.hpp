@@ -4,6 +4,12 @@
 
 unsigned int transportujFlota(unsigned int towar)
 {
+    if (towar == 0)
+    {
+        return 0;
+    }
+    else
+    {
     Stocznia stocznia{};
 
     unsigned int tmp_towar = 0;
@@ -26,4 +32,5 @@ unsigned int transportujFlota(unsigned int towar)
     }
 
     return zaglowce_count;
+    }
 }
