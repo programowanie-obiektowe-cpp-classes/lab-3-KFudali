@@ -9,12 +9,16 @@ using namespace std;
 
 unsigned int transportujFlota(unsigned int towar)
 {
+    if (towar == 0)
+    {
+        return 0;
+    }
+    else
+    {
     Stocznia stocznia{};
 
     unsigned int tmp_towar = 0;
     unsigned int zaglowce_count = 0;
-
-    Statek* s1 = stocznia();
 
     while(tmp_towar < towar)
     {
@@ -29,13 +33,13 @@ unsigned int transportujFlota(unsigned int towar)
         
         delete statek;
     }
-    cout << zaglowce_count;
-    cout << tmp_towar;
+
     return zaglowce_count;
+    }
 }
 
 
 int main()
 {
-    transportujFlota(20);
+    cout << transportujFlota(200);
 }

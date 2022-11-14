@@ -15,8 +15,6 @@ unsigned int transportujFlota(unsigned int towar)
     unsigned int tmp_towar = 0;
     unsigned int zaglowce_count = 0;
 
-    Statek* s1 = stocznia();
-
     while(tmp_towar < towar)
     {
         Statek* statek = stocznia();
