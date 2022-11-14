@@ -16,15 +16,22 @@ unsigned int transportujFlota(unsigned int towar)
 
     Statek* s1 = stocznia();
 
-    for(int i=1; i<5; ++i)
+    while(tmp_towar < towar)
     {
         Statek* statek = stocznia();
-        cout << dynamic_cast<Zaglowiec*>(statek);
+
+        tmp_towar = tmp_towar + statek -> transportuj();
+
+        if(dynamic_cast<Zaglowiec*>(statek))
+        {
+            zaglowce_count = zaglowce_count + 1;
+        }
+        
         delete statek;
     }
-
-    cout << s1->transportuj();
-    return 1;
+    cout << zaglowce_count;
+    cout << tmp_towar;
+    return zaglowce_count;
 }
 
 
