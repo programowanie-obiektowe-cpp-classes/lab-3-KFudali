@@ -1,6 +1,11 @@
+#include<iostream>
+#include "include/Stocznia.hpp"
+#include "include/Statki.hpp"
+
+using namespace std;
 #pragma once
 
-#include "Stocznia.hpp"
+
 
 unsigned int transportujFlota(unsigned int towar)
 {
@@ -31,4 +36,10 @@ unsigned int transportujFlota(unsigned int towar)
 
     return zaglowce_count;
     }
+}
+
+
+int main()
+{
+    cout << transportujFlota(200);
 }
